@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{blog.title}}</title>
+</head>
+<body>
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.content}}</p>
+    {% if blog.image %}
+    <img src="{{ blog.image.url }}" alt=" {{ blog.title }}">
+    <p>By {{blog.author}} | Created at: {{blog.created_at}}</p>
+    {% endif %}
+</body>
+</html>

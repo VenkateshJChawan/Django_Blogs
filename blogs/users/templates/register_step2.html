@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration -Step 2</title>
+</head>
+<body>
+    <h2>User Resgitration - Step 2</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" name="step2_submit">Register</button>
+    </form>
+</body>
+</html>
+
+<!-- <p></p> -->

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog List</title>
+</head>
+<body>
+    <h2>Blog List</h2>
+    <ul>
+        {% for blog in blogs %}
+        <li>
+            <h3><a href="{% url 'blog_detail' blog.id %}"> {{blog.title}}</a></h3>
+            <p>By {{blog.author}} | Created at: {{blog.created_at}}</p>
+        </li>
+        {% empty %}
+        <li>No Blogs found</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
