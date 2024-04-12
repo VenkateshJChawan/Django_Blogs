@@ -11,5 +11,6 @@
     <img src="{{ blog.image.url }}" alt=" {{ blog.title }}">
     <p>By {{blog.author}} | Created at: {{blog.created_at}}</p>
     {% endif %}
+    <p><a href="{% url 'edit_blog' blog.id %}">Edit blog</a></p>
 </body>
 </html>
